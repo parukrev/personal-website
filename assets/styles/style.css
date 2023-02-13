@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/assets/fonts/Lato/Lato-Regular.ttf');
+}
+
+:root {
+  --heading-font: 'Montserrat', Helevetica;
+  --paragraph-font: 'Lato', sans-serif;
+  --theme-color: #010101;
+  --heading-color1: #fafafa;
+  --heading-color2: #FF5252;
+  --paragraph-color: #C3C3C3;
+
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color: var(--theme-color);
+  padding: 30px 0;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .navbar-brand {
+  color: var(--heading-color1);
+  font-family: var(--heading-font);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.navbar .navbar-brand span {
+  color: var(--heading-color2);
+}
+
+.navbar ul li {
+  display: inline;
+  margin-right: 30px;
+}
+
+.navbar ul li a {
+  color: var(--heading-color1);
+  font-family: var(--heading-font);
+  font-size: 16px;
+  font-weight: 500;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+}
+
+.navbar ul li a.active {
+  color: var(--heading-color2);
+}
+
+.navbar ul li a:hover {
+  color: var(--heading-color2);
+}
+
+.navbar .button-download {
+  color: var(--heading-color1);
+  font-family: var(--heading-font);
+  font-weight: 600;
+  background-color: var(--heading-color2);
+  padding: 15px 25px;
+  border: 3px var(--heading-color2) solid;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  -o-transition: .3s ease;
+}
+
+.navbar .button-download:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
