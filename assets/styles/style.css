@@ -19,6 +19,7 @@
   --heading-font: 'Montserrat', Helevetica;
   --paragraph-font: 'Lato', sans-serif;
   --theme-color: #010101;
+  --theme-color2: #1c1c1c;
   --heading-color1: #fafafa;
   --heading-color2: #FF5252;
   --paragraph-color: #C3C3C3;
@@ -211,8 +212,35 @@
   padding: 10px 11px;
 }
 
-/* #about {
+#about {
   width: 100%;
-  height: 400px;
-  background-color: #FF5252;
-} */
+  min-height: 450px;
+  background-color: var(--theme-color2);
+}
+
+#about .container {
+  display: flex;
+}
+
+#about .photo {
+  width: 50%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+#about .photo img {
+  width: 400px;
+  position: absolute;
+  top: -100px;
+  left: 25%;
+}
+
+#about .content {
+  width: 50%;
+  flex-direction: column;
+}
+
+#about .content .wrapper {
+
+}
