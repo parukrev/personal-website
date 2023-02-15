@@ -6,10 +6,7 @@
   list-style: none;
 }
 
-@font-face {
-  font-family: 'Poppins';
-  src: url('/assets/fonts/Poppins/Poppins-Regular.ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
 @font-face {
   font-family: 'Inter';
@@ -17,12 +14,13 @@
 }
 
 :root {
-  --heading-font: 'Poppins', Helevetica;
+  --heading-font: 'Poppins', sans-serif;
   --paragraph-font: 'Inter', sans-serif;
-  --theme-color: #010101;
+  --theme-color: #080808;
   --theme-color2: #282828;
   --heading-color1: #ffffff;
   --heading-color2: #f4b913;
+  --paragraph-color: #7f7f7f;
 }
 
 
@@ -30,10 +28,12 @@
   width: 100%;
   background-color: var(--theme-color);
   padding: 20px;
+  position: relative;
+  z-index: 99;
 }
 
 .container {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -41,6 +41,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 95%;
 }
 
 .navbar .navbar-brand img {
@@ -71,7 +72,7 @@
   color: var(--heading-color2);
 }
 
-.navbar a.button {
+a.button {
   color: var(--heading-color2);
   font-size: .85em;
   font-family: var(--heading-font);
@@ -89,30 +90,139 @@
   -o-transition: .3s ease;
 }
 
-.navbar a.button:hover {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
+.navbar .navbar-list,
+.navbar a.button {
+  display: none;
 }
 
-.navbar .navbar-toogle {
-  display: none;
+a.button:hover {
+  background-color: #222222;
 }
 
 .navbar .navbar-toogle i {
   color: var(--heading-color2);
   font-size: 2em;
+  cursor: pointer;
 }
 
-@media (max-width: 600px) {
+/* Hero */
+.hero {
+  width: 100%;
+  background-color: var(--theme-color);
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.hero .wrapper {
+  width: 100%;
+}
+
+.hero h4 {
+  color: var(--heading-color2);
+  font-family: var(--paragraph-font);
+  font-size: 1em;
+  font-weight: 300;
+  margin-top: 50px;
+}
+
+.hero h1 {
+  color: var(--heading-color1);
+  font-family: var(--heading-font);
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.hero h2 {
+  color: var(--paragraph-color);
+  font-family: var(--heading-font);
+  font-size: 2em;
+  line-height: 1.3em;
+  margin-bottom: 30px;
+}
+
+.hero p {
+  color: var(--paragraph-color);
+  font-family: var(--paragraph-font);
+  font-weight: 500;
+  font-size: 1em;
+  width: 100%;
+  line-height: 1.75em;
+  margin-bottom: 50px;
+}
+
+.hero p a {
+  color: var(--heading-color2);
+}
+
+.hero p a:hover {
+  border-bottom: 1px solid var(--heading-color2);
+}
+
+.hero .contact {
+  display: flex;
+  align-items: center;
+}
+
+.hero .contact .social-media ul {
+  margin-left: 50px;
+}
+
+.hero .contact .social-media ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.hero .contact .social-media ul li a {
+  color: var(--paragraph-color);
+  font-size: 1.5em;
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  -o-transition: .3s ease;
+}
+
+.hero .contact .social-media ul li a:hover {
+  color: var(--heading-color2);
+}
+
+/* Mobile CSS */
+@media (min-width: 600px) {
+  .navbar .container {
+    width: 90%;
+  }
+
+  .container {
+    width: 75%;
+  }
+
   .navbar .navbar-list,
   .navbar a.button {
-    display: none;
+    display: block;
   }
 
   .navbar .navbar-toogle {
-    display: block;
+    display: none;
+  }
+
+  /* hero */
+  .hero .wrapper {
+    width: 80%;
+  }
+
+  .hero h1 {
+    font-size: 5em;
+  }
+
+  .hero h2 {
+    font-size: 3em;
+  }
+
+  .hero p {
+    font-size: 1.2em;
+    width: 75%;
   }
 }
