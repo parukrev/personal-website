@@ -109,11 +109,8 @@ a.button:hover {
 .hero {
   width: 100%;
   background-color: var(--theme-color);
-  min-height: 100vh;
-  position: absolute;
-  top: 0;
-  display: flex;
-  align-items: center;
+  height: 100vh;
+  padding-top: 50px;
 }
 
 .hero .wrapper {
@@ -125,7 +122,6 @@ a.button:hover {
   font-family: var(--paragraph-font);
   font-size: 1em;
   font-weight: 300;
-  margin-top: 50px;
 }
 
 .hero h1 {
@@ -153,11 +149,13 @@ a.button:hover {
   margin-bottom: 50px;
 }
 
-.hero p a {
+.hero p a,
+#about p a {
   color: var(--heading-color2);
 }
 
-.hero p a:hover {
+.hero p a:hover,
+#about p a:hover {
   border-bottom: 1px solid var(--heading-color2);
 }
 
@@ -187,6 +185,66 @@ a.button:hover {
 
 .hero .contact .social-media ul li a:hover {
   color: var(--heading-color2);
+}
+
+/* About */
+#about {
+  width: 100%;
+  min-height: 450px;
+  background-color: var(--theme-color);
+}
+
+#about .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#about .title h3 {
+  color: var(--heading-color2);
+  font-family: var(--heading-font);
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+#about .title .line {
+  width: 60%;
+  height: 1px;
+  background-color: var(--paragraph-color);
+}
+
+#about .content {
+  display: flex;
+  flex-direction: column;
+}
+
+#about .content .desc {
+  padding: 25px 0 30px 0;
+}
+
+#about .content .desc p {
+  color: var(--paragraph-color);
+  font-family: var(--paragraph-font);
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 15px;
+}
+
+#about .content .photo {
+  margin: 50px auto;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 1px solid var(--paragraph-color);
+}
+
+#about .content .photo img {
+  width: 300px;
+  margin-top: -50px;
 }
 
 /* Mobile CSS */
@@ -224,5 +282,17 @@ a.button:hover {
   .hero p {
     font-size: 1.2em;
     width: 75%;
+  }
+
+  #about .title .line {
+    width: 80%;
+  }
+
+  #about .content {
+    flex-direction: row;
+  }
+
+  #about .content .desc {
+    width: 50%;
   }
 }
