@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  list-style: none;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
@@ -231,7 +230,7 @@ a.button:hover {
 }
 
 #about .content .photo {
-  margin: 50px auto;
+  margin: 40px auto;
   height: 350px;
   overflow: hidden;
   border-radius: 10px;
@@ -239,12 +238,35 @@ a.button:hover {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  border: 1px solid var(--paragraph-color);
+  border: 1px solid var(--heading-color2);
+  box-shadow: 10px 10px 0 var(--heading-color2);
 }
 
 #about .content .photo img {
   width: 300px;
   margin-top: -50px;
+}
+
+#about .content .skill-list {
+  display: flex;
+  margin-top: 20px;
+}
+
+#about .content .skill-list ul {
+  margin-right: 50px;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+#about .content .skill-list ul li {
+  color: var(--paragraph-color);
+  font-family: var(--paragraph-font);
+  font-size: .9em;
+  margin-bottom: 10px;
+}
+
+#about .content .skill-list ul li::marker {
+  color: var(--heading-color2);
 }
 
 /* Mobile CSS */
