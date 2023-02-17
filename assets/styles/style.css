@@ -5,6 +5,10 @@
   text-decoration: none;
 }
 
+p, li {
+  line-height: 1.5em;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
 @font-face {
@@ -19,6 +23,7 @@
   --theme-color2: #282828;
   --heading-color1: #ffffff;
   --heading-color2: #f4b913;
+  --sub-heading: #bebebe;
   --paragraph-color: #7f7f7f;
 }
 
@@ -193,20 +198,23 @@ a.button:hover {
   background-color: var(--theme-color);
 }
 
-#about .title {
+#about .title,
+#experience .title {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-#about .title h3 {
+#about .title h3,
+#experience .title h3 {
   color: var(--heading-color2);
   font-family: var(--heading-font);
   font-size: 1.5em;
   font-weight: 600;
 }
 
-#about .title .line {
+#about .title .line,
+#experience .title .line {
   width: 40%;
   height: 1px;
   background-color: var(--paragraph-color);
@@ -225,7 +233,6 @@ a.button:hover {
   color: var(--paragraph-color);
   font-family: var(--paragraph-font);
   font-size: .87em;
-  line-height: 1.5em;
   margin-top: 15px;
 }
 
@@ -270,6 +277,63 @@ a.button:hover {
   color: var(--heading-color2);
 }
 
+/* Experience */
+#experience {
+  width: 100%;
+  background-color: var(--theme-color);
+  min-height: 450px;
+  padding: 100px 0;
+}
+
+#experience .content {
+  display: flex;
+  flex-direction: column;
+}
+
+#experience .content .company-row {
+  margin-top: 50px;
+}
+
+#experience .content .company-row h4 {
+  color: var(--sub-heading);
+  font-family: var(--paragraph-font);
+  font-size: .97em;
+  font-weight: 600;
+  border-left: 2px solid var(--heading-color2);
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+#experience .content .company-row h4 span {
+  color: var(--heading-color2);
+  margin-left: 5px;
+}
+
+#experience .content .company-row h5 {
+  color: var(--paragraph-color);
+  font-family: var(--paragraph-font);
+  font-size: .7em;
+  font-weight: 400;
+  padding-left: 10px;
+  margin-bottom: 25px;
+}
+
+#experience .content .company-row ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+#experience .content .company-row ul li::marker {
+  color: var(--heading-color2);
+}
+
+#experience .content .company-row ul li {
+  color: var(--paragraph-color);
+  font-family: var(--paragraph-font);
+  font-size: .87em;
+  margin-bottom: 10px;
+}
+
 /* Mobile CSS */
 @media (min-width: 600px) {
   .navbar .container {
@@ -311,11 +375,13 @@ a.button:hover {
     width: 75%;
   }
 
-  #about .title h3 {
+  #about .title h3,
+  #experience .title h3 {
     font-size: 1.87em;
   }
 
-  #about .title .line {
+  #about .title .line,
+  #experience .title .line {
     width: 80%;
   }
 
@@ -341,5 +407,17 @@ a.button:hover {
 
   #about .content .photo img {
     width: 300px;
+  }
+
+  #experience .content .company-row h4 {
+    font-size: 1.2em;
+  }
+
+  #experience .content .company-row h5 {
+    font-size: .8em;
+  }
+
+  #experience .content .company-row ul li {
+    font-size: 1em;
   }
 }
