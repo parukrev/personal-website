@@ -119,30 +119,30 @@ a.button:hover {
 .hero h4 {
   color: var(--heading-color2);
   font-family: var(--paragraph-font);
-  font-size: 1em;
+  font-size: .87em;
   font-weight: 300;
 }
 
 .hero h1 {
   color: var(--heading-color1);
   font-family: var(--heading-font);
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 700;
 }
 
 .hero h2 {
   color: var(--paragraph-color);
   font-family: var(--heading-font);
-  font-size: 2em;
+  font-size: 1.5em;
   line-height: 1.3em;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .hero p {
   color: var(--paragraph-color);
   font-family: var(--paragraph-font);
   font-weight: 500;
-  font-size: 1em;
+  font-size: .87em;
   width: 100%;
   line-height: 1.75em;
   margin-bottom: 50px;
@@ -164,17 +164,17 @@ a.button:hover {
 }
 
 .hero .contact .social-media ul {
-  margin-left: 50px;
+  margin-left: 10px;
 }
 
 .hero .contact .social-media ul li {
   display: inline;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .hero .contact .social-media ul li a {
   color: var(--paragraph-color);
-  font-size: 1.5em;
+  font-size: 1.2em;
   transition: .3s ease;
   -webkit-transition: .3s ease;
   -moz-transition: .3s ease;
@@ -202,12 +202,12 @@ a.button:hover {
 #about .title h3 {
   color: var(--heading-color2);
   font-family: var(--heading-font);
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: 600;
 }
 
 #about .title .line {
-  width: 60%;
+  width: 40%;
   height: 1px;
   background-color: var(--paragraph-color);
 }
@@ -224,14 +224,14 @@ a.button:hover {
 #about .content .desc p {
   color: var(--paragraph-color);
   font-family: var(--paragraph-font);
-  font-size: 1em;
+  font-size: .87em;
   line-height: 1.5em;
   margin-top: 15px;
 }
 
 #about .content .photo {
   margin: 40px auto;
-  height: 350px;
+  height: 250px;
   overflow: hidden;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -243,17 +243,18 @@ a.button:hover {
 }
 
 #about .content .photo img {
-  width: 300px;
+  width: 200px;
   margin-top: -50px;
 }
 
 #about .content .skill-list {
   display: flex;
   margin-top: 20px;
+  width: 90%;
+  justify-content: space-between;
 }
 
 #about .content .skill-list ul {
-  margin-right: 50px;
   list-style-type: disc;
   list-style-position: inside;
 }
@@ -293,6 +294,10 @@ a.button:hover {
     width: 80%;
   }
 
+  .hero h4 {
+    font-size: 1em;
+  }
+
   .hero h1 {
     font-size: 5em;
   }
@@ -306,6 +311,10 @@ a.button:hover {
     width: 75%;
   }
 
+  #about .title h3 {
+    font-size: 1.87em;
+  }
+
   #about .title .line {
     width: 80%;
   }
@@ -316,5 +325,21 @@ a.button:hover {
 
   #about .content .desc {
     width: 50%;
+  }
+
+  #about .content .desc p {
+    font-size: 1em;
+  }
+
+  #about .content .skill-list {
+    width: 50%;
+  }
+
+  #about .content .photo {
+    height: 350px;
+  }
+
+  #about .content .photo img {
+    width: 300px;
   }
 }
