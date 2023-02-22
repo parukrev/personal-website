@@ -196,6 +196,7 @@ a.button:hover {
   width: 100%;
   min-height: 450px;
   background-color: var(--theme-color);
+  padding: 50px 0;
 }
 
 #about .title,
@@ -512,12 +513,19 @@ a.button:hover {
   align-items: center;
 }
 
+#contact .content h4 {
+  color: var(--heading-color2);
+  font-family: var(--paragraph-font);
+  font-size: .8em;
+  font-weight: 400;
+}
+
 #contact .content h2 {
   color: var(--sub-heading);
   font-family: var(--heading-font);
   text-align: center;
-  font-size: 1.7em;
-  font-weight: 500;
+  font-size: 2em;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
@@ -534,11 +542,52 @@ a.button:hover {
   background-color: var(--heading-color2);
   border: none;
   padding: 10px 15px;
-  border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  transition: .3s ease;
+  border: 2px solid var(--heading-color2);
+  cursor: pointer;
+}
+
+#contact .content button:hover {
+  color: var(--heading-color2);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+footer {
+  background-color: var(--theme-color);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+footer p {
+  color: var(--sub-heading);
+  font-family: var(--paragraph-font);
+  font-size: .75em;
+  line-height: 2em;
+}
+
+footer p span {
+  color: var(--heading-color2);
+}
+
+footer a {
+  color: var(--sub-heading);
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  -o-transition: .3s ease;
+}
+
+footer a:hover {
+  color: var(--heading-color2);
 }
 
 /* Mobile CSS */
@@ -684,5 +733,18 @@ a.button:hover {
 
   #project .content .button-row {
   justify-content: end;
-}
+  }
+
+  #contact .content h2 {
+    font-size: 3em;
+  }
+
+  #contact .content p {
+    width: 50%;
+    font-size: 1em;
+  }
+
+  footer p {
+    font-size: .8em;
+  }
 }
