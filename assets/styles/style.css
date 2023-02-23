@@ -593,7 +593,7 @@ footer a:hover {
   color: var(--heading-color2);
 }
 
-/* Mobile CSS */
+/* Desktop CSS */
 @media (min-width: 600px) {
   .navbar .container {
     width: 90%;
@@ -749,5 +749,23 @@ footer a:hover {
 
   footer p {
     font-size: .8em;
+  }
+}
+
+/* Mobile Navbar CSS */
+@media (max-width: 800px) {
+  .navbar .navbar-list {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .9);
+    top: 80px;
+    right: 0;
+    left: 0;
+    padding: 10px 20px;
+  }
+
+  .navbar .navbar-list ul li {
+    display: block;
+    margin-bottom: 20px;
   }
 }
