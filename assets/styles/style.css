@@ -27,6 +27,9 @@ p, li {
   --paragraph-color: #7f7f7f;
 }
 
+body {
+  scroll-behavior: smooth;
+}
 
 .navbar {
   width: 100%;
