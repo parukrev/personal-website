@@ -118,7 +118,7 @@ a.button:hover {
 .hero {
   width: 100%;
   background-color: var(--theme-color);
-  height: 100vh;
+  height: 600px;
   padding-top: 50px;
 }
 
