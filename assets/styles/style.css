@@ -35,7 +35,7 @@ html {
   width: 100%;
   background-color: var(--theme-color);
   padding: 20px;
-  position: relative;
+  position: fixed;
   z-index: 99;
 }
 
@@ -612,7 +612,15 @@ footer a:hover {
     display: none;
   }
 
+  .navbar .navbar-toogle input {
+    display: none;
+  }
+
   /* hero */
+  .hero {
+    padding-top: 150px;
+  }
+
   .hero .wrapper {
     width: 80%;
   }
@@ -632,6 +640,10 @@ footer a:hover {
   .hero p {
     font-size: 1.2em;
     width: 75%;
+  }
+
+  #about {
+    padding-top: 100px;
   }
 
   #about .title h3,
@@ -680,6 +692,10 @@ footer a:hover {
 
   #experience .content .company-row ul li {
     font-size: 1em;
+  }
+
+  #project {
+    padding-top: 100px;
   }
 
   #project .content .project-row {
@@ -753,19 +769,28 @@ footer a:hover {
 }
 
 /* Mobile Navbar CSS */
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
+  .navbar {
+    position: relative;
+  }
+
   .navbar .navbar-list {
-    display: none;
+    display: block;
     position: absolute;
-    background-color: rgba(0, 0, 0, .9);
+    background-color: var(--theme-color);
     top: 80px;
     right: 0;
     left: 0;
-    padding: 10px 20px;
-  }
+    padding: 10px 30px;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+}
 
   .navbar .navbar-list ul li {
     display: block;
     margin-bottom: 20px;
-  }
+  } 
 }
