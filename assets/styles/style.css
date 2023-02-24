@@ -118,7 +118,7 @@ a.button:hover {
 .hero {
   width: 100%;
   background-color: var(--theme-color);
-  height: 600px;
+  height: 480px;
   padding-top: 50px;
 }
 
@@ -620,6 +620,7 @@ footer a:hover {
   /* hero */
   .hero {
     padding-top: 150px;
+    height: 600px;
   }
 
   .hero .wrapper {
